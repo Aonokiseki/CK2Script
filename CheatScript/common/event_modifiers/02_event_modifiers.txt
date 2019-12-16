@@ -1,0 +1,63 @@
+#锐不可当
+overwhelming = {
+	icon = 1
+	martial = 4
+	combat_rating = 10
+	levy_size = 0.25
+	command_modifier = {
+		morale_offence = 0.25
+		morale_defence = 0.25
+		siege = 0.25
+	}
+}
+#天道化身
+godlike = {
+	icon = 81
+	health = 4
+	fertility = 0.5
+	general_opinion = 20
+	demesne_size= 20
+	monthly_character_wealth = 30
+	monthly_character_prestige = 5
+	monthly_character_piety = 5
+	build_time_modifier = -0.9
+	build_cost_modifier = -0.9
+}
+#不可战胜
+invincible = {
+	icon = 117
+	martial = 4
+	combat_rating = 5
+	levy_reinforce_rate = 0.25
+	command_modifier = {
+		morale_offence = 0.5
+		defence = 0.75
+	}
+}
+#决死
+fight_to_death = {
+	icon = 19
+	health = -3
+	martial = 6
+	combat_rating = 25
+	command_modifier = {
+		morale_offence = 1.0
+		morale_defence = 1.0
+		defence = -0.75
+		damage = 0.5
+		siege = 0.25
+	}
+}
+#众矢之的
+a_target_for_all = {
+	icon = - 76
+	diplomacy = -10
+	monthly_character_prestige = -5
+	monthly_character_wealth = -30
+	general_opinion = -100
+}
+#家族的希望
+family_hope = {
+	icon = 39
+	dynasty_opinion = 20
+}

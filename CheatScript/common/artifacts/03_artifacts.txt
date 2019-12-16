@@ -1,0 +1,38 @@
+#Custom Artifacts
+excalibur = {
+	quality = 5
+	monthly_character_prestige = 0.5
+	martial = 2
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.25
+		morale_defence = 0.25
+		siege = 0.4
+	}
+	active = {
+		is_adult = yes
+	}
+	flags = {very_rare troops_morale sword}
+	stacking = no
+	picture = "GFX_sword_of_heroes"
+	slot = weapon
+}
+
+gungnir = {
+	quality = 5
+	monthly_character_prestige = 1
+	martial = 2
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.2
+		cavalry = 0.3
+		pikemen = 0.3
+	}
+	active = {
+		is_adult = yes
+	}
+	flags = { combat_weapon lance}
+	stacking = no
+	picture = "GFX_the_impaler"
+	slot = weapon
+}
