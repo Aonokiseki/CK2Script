@@ -1,4 +1,70 @@
 targetted_decisions = {
+	#让ROOT和FROMFROM成为恋人
+	Make_Lovers = {
+		only_playable = yes
+		ai = no
+		ai_check_interval = 10000
+		third_party_filter = court
+		
+		third_party_potential = {
+			FROMFROM = {
+				is_alive = yes
+				is_adult = yes
+				NOT = {
+					character = ROOT
+				}
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+		third_party_allow = {
+			any_realm_character = {
+				is_alive = yes
+				is_adult = yes
+				NOT = {
+					character = ROOT
+				}
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+		potential = {
+			ROOT = {
+				is_adult = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						is_rival = FROMFROM
+					}
+				}
+				ROOT = {
+					remove_rival = FROMFROM
+				}
+			}
+			ROOT = {
+				add_lover = FROMFROM
+			}
+			if = {
+				ROOT = {
+					limit = { same_sex = FROMFROM }
+					ROOT = {
+						add_trait = homosexual
+					}
+					FROMFROM = {
+						add_trait = homosexual
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	#让ROOT和FROMFROM交朋友
 	Make_Friends = {
 		only_playable = yes
@@ -1016,6 +1082,7 @@ decisions = {
 				dna = bcggczgbees
 			}
 			new_character = {
+				remove_trait = homosexual
 				remove_trait = gluttonous
 				remove_trait = greedy
 				remove_trait = slothful
@@ -1197,6 +1264,7 @@ decisions = {
 				dna = bffhfofbecr
 			}
 			new_character = {
+				remove_trait = homosexual
 				remove_trait = gluttonous
 				remove_trait = greedy
 				remove_trait = slothful
