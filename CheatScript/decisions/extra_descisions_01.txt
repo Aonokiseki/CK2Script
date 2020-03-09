@@ -494,6 +494,7 @@ targetted_decisions = {
 					change_diplomacy = 1
 					change_stewardship = 1
 					change_learning = 1
+					battle_rating = 1
 				}
 			}
 		}
@@ -861,6 +862,33 @@ decisions = {
 			factor = 0
 		}
 	}
+	#财富与爱
+	Rich_And_Love = {
+		only_playable = yes
+		ai = no
+		ai_check_interval = 10000
+		potential = {}
+		allow = {
+			character = ROOT
+		}
+		effect = {
+			ROOT = {
+				add_character_modifier = {
+					modifier = filthy_rich
+					duration = -1
+					hidden = no
+				}
+				add_character_modifier = {
+					modifier = family_hope
+					duration = -1
+					hidden = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	#增强当前人物能力
 	Become_Overwhelming = {
 		only_playable = yes
@@ -948,11 +976,6 @@ decisions = {
 				}
 				add_character_modifier = {
 					modifier = invincible
-					duration = -1
-					hidden = no
-				}
-				add_character_modifier = {
-					modifier = family_hope
 					duration = -1
 					hidden = no
 				}
@@ -1468,33 +1491,6 @@ decisions = {
 	}
 }
 settlement_decisions = {
-	#爆发伤寒
-	Spwan_disease = {
-		ai = no
-		filter = owned
-		potential = {
-			location = {
-				duchy = {
-					holder_scope = {
-						ai = yes
-					}
-				}
-			}
-		}
-		allow = {
-			always = yes
-		}
-		effect = {
-			location = {
-				duchy = {
-					spawn_disease = typhoid_fever
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 	#公爵领宣称
 	Claim_Duchy = {
 		ai = no

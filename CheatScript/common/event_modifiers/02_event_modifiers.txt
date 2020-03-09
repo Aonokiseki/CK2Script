@@ -10,6 +10,14 @@ overwhelming = {
 		siege = 0.25
 	}
 }
+#发大财
+filthy_rich = {
+	icon = 6
+	monthly_character_wealth = 30
+	monthly_character_prestige = 5
+	monthly_character_piety = 5
+}
+
 #天道化身
 godlike = {
 	icon = 81
@@ -17,9 +25,6 @@ godlike = {
 	fertility = 0.5
 	general_opinion = 20
 	demesne_size= 20
-	monthly_character_wealth = 30
-	monthly_character_prestige = 5
-	monthly_character_piety = 5
 	build_time_modifier = -0.9
 	build_cost_modifier = -0.9
 }
