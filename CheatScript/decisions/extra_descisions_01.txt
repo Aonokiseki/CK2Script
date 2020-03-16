@@ -1,4 +1,69 @@
 targetted_decisions = {
+	#让ROOT和FROMFROM成为仇人
+	Make_Rival = {
+		only_playable = yes
+		ai = no
+		ai_check_interval = 10000
+		third_party_allow = court 
+		
+		third_party_potential = {
+			FROMFROM = {
+				is_alive = yes
+				is_adult = yes
+				NOT = {
+					character = ROOT
+				}
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+		third_party_allow = {
+			any_realm_character = {
+				is_alive = yes
+				is_adult = yes
+				NOT = {
+					character = ROOT
+				}
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+		potential = {
+			ROOT = {
+				is_adult = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						is_lover = FROMFROM				
+					}
+				}
+				ROOT = {
+					remove_lover = FROMFROM
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						is_friend = FROMFROM
+					}
+				}
+				ROOT = {
+					remove_friend = FROMFROM
+				}
+			}
+			ROOT = {
+				add_rival = FROMFROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	#让ROOT和FROMFROM成为恋人
 	Make_Lovers = {
 		only_playable = yes
@@ -662,6 +727,22 @@ targetted_decisions = {
 }
 
 decisions = {	
+	#获得一个能力很强并且很漂亮的儿子/女儿
+	Get_A_Super_Child = {
+		ai = no
+		only_playable = yes
+		ai_check_interval = 10000
+		potential = {}
+		allow = {
+			character = ROOT
+		}
+		effect = {
+			character_event = { id = Cheat.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	#科技点数
 	Get_TechPoints = {
 		ai = no
@@ -1078,7 +1159,7 @@ decisions = {
 		}
     }
 	#招募超级贵族
-	Employ_Super_Steward = {
+	Employ_Super_German_Steward = {
 		ai = no
 		only_playable = yes
 
@@ -1261,7 +1342,7 @@ decisions = {
 		}
 	}
 	#招募一个超级名媛
-    Present_Super_Debutante = {
+    Present_Super_German_Debutante = {
 		only_playable = yes
 		ai = no
 		ai_check_interval = 10000

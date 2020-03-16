@@ -1,0 +1,87 @@
+character_event = {
+	id = Cheat.1
+	desc = EVTDESC_WOL_562
+	picture = GFX_evt_birth
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = { # Hidden so the Pope does not appear as a portrait for affected characters
+			k_papal_state = {
+				holder_scope = {
+					create_character = {
+						dynasty = none
+						religion = ROOT
+						culture = german
+						female = yes
+						dna="bffhfofbecr" 
+						age = 17
+					}
+					new_character = {
+						ROOT = {
+							random_list = {
+								50 = {
+									create_character = {
+										dynasty = ROOT
+										religion = ROOT
+										culture = german
+										race = ROOT
+										genetic_mother = PREV
+										genetic_father = ROOT
+										female = no
+										age = 0
+										trait = fair
+										trait = genius
+                                        dna = bcggczgbees
+									}
+									new_character = {
+										save_event_target_as = target_baby
+										set_character_flag = super_child
+									}
+								}
+								50 = {
+									create_character = {
+										dynasty = ROOT
+										religion = ROOT
+										culture = german
+										race = ROOT
+										genetic_mother = PREV
+										genetic_father = ROOT
+										female = yes
+										age = 0
+                                        dna = bffhfofbecr
+										trait = fair
+										trait = genius
+									}
+									new_character = {
+										save_event_target_as = target_baby
+										set_character_flag = super_child
+									}
+								}
+							}
+						}
+						death = { death_reason = death_natural }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_WOL_562
+		ai_chance = {
+			factor = 100
+		}
+		event_target:target_baby = {
+			set_father = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_WOL_562
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
